@@ -29,6 +29,17 @@ Kostas Bekris\\
 \begin{enumerate}
 
 \item Question 1
+\begin{enumerate}
+\item Starting with an arbitrary discount of 0.4 and values (0, 0, 0, 0), it took one millisecond and five iterations to find the optimal policy of: Action 2 at State 1; Action 2 at State 2; Action 3 at State 3; and Action 1 at State 4. \\ \\
+The optimal utility at the respective states are 0.14690304000000004, 0.39942144000000007, 1.1707264, and 0.43098624000000013. The method was repeatedly applying the Bellman equation to find the policy that maximizes the utility function. Intermediate values:
+\begin{enumerate}
+\item Policy [0, 0, 0, 0] Values [0, 0, 1, 0]
+\item Policy [0, 0, 0, 0] Values [0, 0.32, 1, 0.36]
+\item Policy [0, 1, 0, 0] Values [0.1152, 0.3456, 0.144, 0.3744]
+\item Policy [1, 1, 2, 0]  Values [0.129024, 0.393728, 1.14976, 0.426816]
+\item Policy [1, 1, 2, 0]  Values [0.14690304, 0.39942144, 1.1707264, 0.43098624]
+\end{enumerate}
+\end{enumerate}
 \item Question 2
 \begin{enumerate}
 \item Yes.

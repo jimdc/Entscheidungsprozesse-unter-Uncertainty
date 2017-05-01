@@ -57,6 +57,7 @@ Gain (Pub) = 1 - $[\frac{7}{12} I(\frac{3}{7}, \frac{4}{7}) + \frac{5}{12} I(\fr
 \item
 \includegraphics[scale=0.5]{svm}
 \item For this line, w = ${-1.3164}$ and b = ${\text{4.2658}}$.
+\item As the newly-added points do nothing to affect the separation of the training points overall, the linear SVM's values for w and b would remain the same.
 \end {enumerate}
 \item Question 4
 \begin {enumerate}
@@ -74,7 +75,8 @@ Because the graph can only be depicted one-dimensionally, the best way to visual
 \item Question 5
 \begin {enumerate}
 \item
-The minimum error for this chart is 2, as shown below. It is impossible for a straight line to perfectly separate all the samples by the nature of the plotted samples.
+The minimum error for this chart is 2, as shown below. It is impossible for a straight line to perfectly separate all the samples by the nature of the plotted samples. \newline
+In the below chart, the value of the line is: -1.02098x + 0.97902, with weights w$_{\text{0}}$ = 0.7, w$_{\text{1}}$ = -0.730, w$_{\text{2}}$ = -0.715, where w$_{\text{0}}$ is the bias.
 \includegraphics[scale=0.5]{graph3}
 \item
 In order to tackle this problem, we need to encapsulate the Class +1 samples in an area surrounded by Class -1 samples, effectively boxing it in. A multi-layer perceptron is required that should operate with the following steps:
@@ -82,12 +84,12 @@ In order to tackle this problem, we need to encapsulate the Class +1 samples in 
 \item Given input weights and a bias are inserted three times into three different 'hidden' perceptrons.
 \item The hidden perceptrons calculate as normal, each with their own lines and their own means of determining missed specimens.
 \item The perceptrons place their output in the 'output' perceptron, which uses these outputs as their own lines.
-\item The output will check if the lines function as an 'area' and successfully encapsulate the Class +1 specimens.
+\item The output will check if the lines function as an 'area' and successfully encapsulate the Class +1 specimens, without allowing any Class -1 samples.
 \item If it does, then stop. If not, then modify the weights inserted into each hidden perceptron until it is successful.
 \end {enumerate}
 We can actually use the unsuccessful line used in (a) towards this end. \newline 
 \includegraphics[scale=0.4]{graph4}
-\item Line 1: -1.02098x + 0.97902 \newline Line 2: -4.09790x + .834 \newline .62098x + 0.08379
+\item Line 1: -1.02098x + 0.97902 \newline Line 2: -4.09790x + .834 \newline Line 3: .62098x + 0.08379
 \newline
 \end {enumerate}
 Question 4, Part (a) Code Printout: \newline
